@@ -1,5 +1,6 @@
 import React from 'react';
 import { FullScreenModal } from 'd-ui';
+import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
 
 class ShowcaseFullScreenModal extends React.PureComponent {
   constructor(props) {
@@ -12,7 +13,7 @@ class ShowcaseFullScreenModal extends React.PureComponent {
 
   render() {
     return (
-      <div>
+      <ShowcaseContainer title="Full Screen Modal">
         <div>
           <div
             aria-hidden
@@ -27,7 +28,7 @@ class ShowcaseFullScreenModal extends React.PureComponent {
           visible={this.state.show}
           onClose={() => this.setState({ show: false })}
         />
-      </div>
+      </ShowcaseContainer>
     );
   }
 }

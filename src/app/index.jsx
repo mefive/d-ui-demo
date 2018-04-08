@@ -8,7 +8,7 @@ import {
   Link,
 } from 'react-router';
 
-import './style/index.scss';
+import style from './style/index.scss';
 
 // pages
 import Table from './Table';
@@ -24,11 +24,11 @@ import Select from './Select';
 import NumberFlip from './NumberFlip/index';
 
 const Port = props => (
-  <div id="port" className="container">
+  <div className="p-3">
     {props.children != null
         ? props.children
         : (
-          <ul className="navs">
+          <ul className={style.navs}>
             <li>
               <Link to="table">
                 Table

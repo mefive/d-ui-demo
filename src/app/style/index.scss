@@ -1,1 +1,16 @@
 @import "~d-ui/src/style/core/index";
+@import "~d-ui/src/style/icons";
+@import "fonts";
+
+
+:local(.navs) {
+  a {
+    font-weight: bold;
+    //color: $text-color;
+    font-size: $font-size-xl;
+  }
+
+  li + li {
+    margin-top: 10px;
+  }
+}

@@ -3,6 +3,7 @@ import random from 'lodash/random';
 import { NumberFlip } from 'd-ui';
 
 import style from './style/index.scss';
+import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 
 class NumberFlipShowcase extends React.PureComponent {
   constructor(props) {
@@ -15,11 +16,7 @@ class NumberFlipShowcase extends React.PureComponent {
 
   render() {
     return (
-      <div>
-        <div className="bold">
-          Number Flip
-        </div>
-
+      <ShowcaseContainer title="Number Flip">
         <div className="mt-1">
           <div
             className="btn btn-primary"
@@ -45,7 +42,7 @@ class NumberFlipShowcase extends React.PureComponent {
             value={this.state.value}
           />
         </div>
-      </div>
+      </ShowcaseContainer>
     );
   }
 }

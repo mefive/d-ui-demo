@@ -1,6 +1,7 @@
 import React from 'react';
 import random from 'lodash/random';
 import { Select } from 'd-ui';
+import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
 
 class SelectShowcase extends React.PureComponent {
   constructor(props) {
@@ -16,8 +17,7 @@ class SelectShowcase extends React.PureComponent {
 
   render() {
     return (
-      <div>
-        <div className="bold">Select</div>
+      <ShowcaseContainer title="Select">
         <div className="mt-1">
           <div style={{ width: 200 }}>
             <Select
@@ -27,7 +27,7 @@ class SelectShowcase extends React.PureComponent {
             />
           </div>
         </div>
-      </div>
+      </ShowcaseContainer>
     );
   }
 }

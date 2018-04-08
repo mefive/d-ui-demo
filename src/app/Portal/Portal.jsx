@@ -1,6 +1,7 @@
 import { Portal } from 'd-ui';
 import React from 'react';
 import Test from './Test';
+import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 
 class PortalShowcase extends React.PureComponent {
   constructor(props) {
@@ -20,9 +21,7 @@ class PortalShowcase extends React.PureComponent {
 
   render() {
     return (
-      <div>
-        <div className="bold">Portal</div>
-
+      <ShowcaseContainer title="Portal">
         {this.state.showPortal && (
           <Portal>
             <div
@@ -50,7 +49,7 @@ class PortalShowcase extends React.PureComponent {
             }
           />
         </div>
-      </div>
+      </ShowcaseContainer>
     );
   }
 }

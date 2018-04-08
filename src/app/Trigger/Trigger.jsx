@@ -5,6 +5,7 @@ import { getPopoverContainer } from 'd-ui/src/utils/layout';
 import moment from 'moment';
 
 import style from './style/index.scss';
+import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 
 function formatDate() {
   return moment().format('YYYY-MM-DD');
@@ -26,51 +27,39 @@ class ShowcaseTrigger extends React.PureComponent {
 
   render() {
     return (
-      <div>
-        <div className="bold">Trigger</div>
-
-        <div
-          className="mt-3 p-relative"
-          ref={(el) => { this.wrapper = el; }}
-        >
-          <div
-            className={style.container}
-            ref={(el) => { this.container = el; }}
-          >
-            {(new Array(1)).fill(0).map((i, index) => (
-              <div key={`${index + 1}`} className="mt-1">
-                <Trigger
-                  action="click"
-                  getPopoverContainer={() => getPopoverContainer(this.wrapper)}
-                  enterClassName="move-right-in"
-                  leaveClassName="move-right-out"
-                  popover={(
-                    <Popover
-                      className={classNames(
-                        'p-3',
-                        style.popover,
-                      )}
-                      ref={(el) => { this.popoverElements[index] = el; }}
-                    >
-                      Popover Content
-                    </Popover>
+      <ShowcaseContainer title="Trigger">
+        {(new Array(1)).fill(0).map((i, index) => (
+          <div key={`${index + 1}`} className="mt-1">
+            <Trigger
+              action="click"
+              getPopoverContainer={() => getPopoverContainer(this.wrapper)}
+              enterClassName="move-right-in"
+              leaveClassName="move-right-out"
+              popover={(
+                <Popover
+                  className={classNames(
+                    'p-3',
+                    style.popover,
                   )}
+                  ref={(el) => { this.popoverElements[index] = el; }}
                 >
-                  <div
-                    className="btn btn-primary"
-                    aria-hidden
-                  >
-                    Show Popover
-                  </div>
-                </Trigger>
+                  Popover Content
+                </Popover>
+              )}
+            >
+              <div
+                className="btn btn-primary"
+                aria-hidden
+              >
+                Show Popover
               </div>
-            ))}
+            </Trigger>
           </div>
-        </div>
+        ))}
 
         <div className="mt-3 bold">Tooltip</div>
         <div className="mt-1 text-center">
-          <Tooltip title="top" defaultActive>
+          <Tooltip title="top">
             <div className="d-inline-block">Top</div>
           </Tooltip>
 
@@ -134,7 +123,7 @@ class ShowcaseTrigger extends React.PureComponent {
             onChange={({ start, end }) => this.setState({ range: { start, end } })}
           />
         </div>
-      </div>
+      </ShowcaseContainer>
     );
   }
 }

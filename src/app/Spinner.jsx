@@ -1,10 +1,11 @@
 import React from 'react';
 import { DoubleBounce, Tooltip } from 'd-ui';
+import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
 
 class Spinner extends React.PureComponent {
   render() {
     return (
-      <div>
+      <ShowcaseContainer title="Spinner">
         <div className="bold">Double Bounce</div>
         <div className="mt-1">
           <Tooltip title='点击去"服务中心"订阅节点'>
@@ -23,7 +24,7 @@ class Spinner extends React.PureComponent {
             </div>
           </Tooltip>
         </div>
-      </div>
+      </ShowcaseContainer>
     );
   }
 }

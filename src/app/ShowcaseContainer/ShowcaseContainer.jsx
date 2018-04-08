@@ -2,6 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import style from './style/index.scss';
+
 const propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
@@ -16,16 +18,14 @@ const defaultProps = {
 
 class ShowcaseContainer extends React.PureComponent {
   render() {
-    const { className } = this.props;
-
     return (
       <div className={classNames(
-        'showcase',
-        { [className]: !!className },
+        style.container,
+        this.props.className,
       )}
       >
         <h1>{this.props.title}</h1>
-        <div className="items">
+        <div className={style.items}>
           {this.props.children}
         </div>
       </div>

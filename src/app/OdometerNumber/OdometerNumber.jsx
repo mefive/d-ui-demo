@@ -1,6 +1,7 @@
 import React from 'react';
 import { OdometerNumber } from 'd-ui';
 import calendarBackgoundImage from './images/calendar.png';
+import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 
 class ShowcaseOdometerNumber extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class ShowcaseOdometerNumber extends React.Component {
 
   render() {
     return (
-      <div>
+      <ShowcaseContainer title={"Odometer Number"}>
         <div className="bold">Float Number</div>
         <div className="mt-1">
           <OdometerNumber value={this.state.size} unit="MB" />
@@ -60,7 +61,7 @@ class ShowcaseOdometerNumber extends React.Component {
             Add
           </div>
         </div>
-      </div>
+      </ShowcaseContainer>
     );
   }
 }
