@@ -1,5 +1,6 @@
-import { Portal } from 'd-ui';
 import React from 'react';
+import { Portal } from 'd-ui';
+
 import Test from './Test';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 

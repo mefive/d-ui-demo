@@ -1,5 +1,5 @@
 import React from 'react';
-import { FullScreenModal } from 'd-ui';
+import { FullScreenModal, Clickable } from 'd-ui';
 import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
 
 class ShowcaseFullScreenModal extends React.PureComponent {
@@ -15,13 +15,15 @@ class ShowcaseFullScreenModal extends React.PureComponent {
     return (
       <ShowcaseContainer title="Full Screen Modal">
         <div>
-          <div
-            aria-hidden
-            className="btn btn-primary"
+          <Clickable
             onClick={() => this.setState({ show: true })}
           >
-            Show
-          </div>
+            <div
+              className="btn btn-primary"
+            >
+              Show
+            </div>
+          </Clickable>
         </div>
 
         <FullScreenModal

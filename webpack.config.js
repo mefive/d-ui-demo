@@ -34,10 +34,7 @@ module.exports = function () {
       rules: [
         {
           test: /\.jsx?$/,
-          include: [
-            path.join(__dirname, 'src'),
-            path.join(__dirname, '/node_modules/d-ui/')
-          ],
+          exclude: /node_modules/,
           use: 'babel-loader',
         },
         {

@@ -1,7 +1,15 @@
-@import "~d-ui/src/style/core/index";
-@import "~d-ui/src/style/icons";
-@import "fonts";
+@import "~d-ui/lib/style/index";
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('~d-ui/lib/fonts/icomoon.eot');
+  src:  url('~d-ui/lib/fonts/icomoon.eot') format('embedded-opentype'),
+  url('~d-ui/lib/fonts/icomoon.ttf') format('truetype'),
+  url('~d-ui/lib/fonts/icomoon.woff') format('woff'),
+  url('~d-ui/lib/fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :local(.navs) {
   a {
