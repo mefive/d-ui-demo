@@ -1,6 +1,6 @@
 import React from 'react';
 import random from 'lodash/random';
-import { NumberFlip } from 'd-ui';
+import { NumberFlip } from 'ddy-ui';
 
 import style from './style/index.scss';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';

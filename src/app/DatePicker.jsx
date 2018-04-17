@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { DatePicker } from 'd-ui';
+import { DatePicker } from 'ddy-ui';
 
 import ShowcaseContainer from './ShowcaseContainer';
 

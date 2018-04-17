@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { DateRangePicker } from 'd-ui';
+import { DateRangePicker } from 'ddy-ui';
 import ShowcaseContainer from './ShowcaseContainer';
 
 class ShowcaseDateRangePicker extends React.Component {

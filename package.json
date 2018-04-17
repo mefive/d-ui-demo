@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "d-ui": "git+https://github.com/mefive/d-ui.git",
+    "ddy-ui": "~0.0.1",
     "lodash": "^4.17.4",
     "moment": "^2.22.0",
     "prop-types": "latest",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clickable, Alert, Confirm } from 'd-ui';
+import { Clickable, Alert, Confirm } from 'ddy-ui';
 
 import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
 

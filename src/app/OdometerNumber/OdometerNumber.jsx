@@ -1,5 +1,5 @@
 import React from 'react';
-import { OdometerNumber } from 'd-ui';
+import { OdometerNumber } from 'ddy-ui';
 import calendarBackgoundImage from './images/calendar.png';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 

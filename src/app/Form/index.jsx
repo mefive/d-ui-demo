@@ -1,6 +1,7 @@
 import React from 'react';
 import moment from 'moment';
-import { Alert, Col, Row } from 'd-ui';
+import { Alert } from 'ddy-ui';
+
 import ShowcaseContainer from '../ShowcaseContainer';
 import TestForm from './TestForm';
 

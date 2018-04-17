@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, FormItem, withForm, DatePicker, Input, Clickable, Row, Col } from 'd-ui';
+import { Form, FormItem, withForm, DatePicker, Input, Clickable, Row, Col } from 'ddy-ui';
 
 const propTypes = {
   getFieldDecorator: PropTypes.func.isRequired,

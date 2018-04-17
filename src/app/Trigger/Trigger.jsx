@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { Popover, Trigger } from 'd-ui';
-import { getPopoverContainer } from 'd-ui/lib/utils/layout';
+import { Popover, Trigger } from 'ddy-ui';
+import { getPopoverContainer } from 'ddy-ui/lib/utils/layout';
 
 import ShowcaseContainer from '../ShowcaseContainer';
 

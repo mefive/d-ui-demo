@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'd-ui';
+import { Row, Col } from 'ddy-ui';
 
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 import style from './style/index.scss';

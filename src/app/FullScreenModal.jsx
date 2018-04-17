@@ -1,5 +1,5 @@
 import React from 'react';
-import { FullScreenModal, Clickable } from 'd-ui';
+import { FullScreenModal, Clickable } from 'ddy-ui';
 import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
 
 class ShowcaseFullScreenModal extends React.PureComponent {

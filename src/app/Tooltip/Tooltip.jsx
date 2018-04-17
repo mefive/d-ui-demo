@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popover, Tooltip } from 'd-ui';
+import { Popover, Tooltip } from 'ddy-ui';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 
 import style from './style/index.scss';
