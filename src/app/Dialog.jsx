@@ -1,7 +1,9 @@
 import React from 'react';
-import { Clickable, Alert, Confirm } from 'ddy-ui';
 
 import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
+import Clickable from '../components/Clickable';
+import Alert from '../components/Alert/Alert';
+import Confirm from '../components/Confirm/Confirm';
 
 class ShowcaseDialog extends React.PureComponent {
   constructor(props) {

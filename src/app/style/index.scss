@@ -1,12 +1,12 @@
-@import "~ddy-ui/lib/style/index";
+@import "../../components/style/index";
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('~ddy-ui/lib/fonts/icomoon.eot');
-  src:  url('~ddy-ui/lib/fonts/icomoon.eot') format('embedded-opentype'),
-  url('~ddy-ui/lib/fonts/icomoon.ttf') format('truetype'),
-  url('~ddy-ui/lib/fonts/icomoon.woff') format('woff'),
-  url('~ddy-ui/lib/fonts/icomoon.svg') format('svg');
+  src:  url('../../components/fonts/icomoon.eot');
+  src:  url('../../components/fonts/icomoon.eot') format('embedded-opentype'),
+  url('../../components/fonts/icomoon.ttf') format('truetype'),
+  url('../../components/fonts/icomoon.woff') format('woff'),
+  url('../../components/fonts/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }

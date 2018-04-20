@@ -1,9 +1,11 @@
 import React from 'react';
 import moment from 'moment';
-import { Alert } from 'ddy-ui';
 
 import ShowcaseContainer from '../ShowcaseContainer';
 import TestForm from './TestForm';
+import Row from '../../components/grid/Row';
+import Col from '../../components/grid/Col';
+import Alert from '../../components/Alert/Alert';
 
 class ShowcaseForm extends React.PureComponent {
   constructor(props) {
@@ -14,6 +16,8 @@ class ShowcaseForm extends React.PureComponent {
         name: 'mefive',
         birthDate: '1985-12-20',
         age: 32,
+        gender: 'male',
+        avatar: null,
       },
       alert: false,
     };
@@ -44,6 +48,10 @@ class ShowcaseForm extends React.PureComponent {
             />
           </Col>
         </Row>
+
+        <div className="mt-2">
+          {JSON.stringify(this.state.dataSource)}
+        </div>
 
         <Alert
           visible={this.state.alert}

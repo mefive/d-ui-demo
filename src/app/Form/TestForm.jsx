@@ -1,17 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, FormItem, withForm, DatePicker, Input, Clickable, Row, Col } from 'ddy-ui';
+import Form from '../../components/form/Form';
+import FormItem from '../../components/form/FormItem';
+import Input from '../../components/Input';
+import DatePicker from '../../components/DatePicker/DatePicker';
+import Row from '../../components/grid/Row';
+import Col from '../../components/grid/Col';
+import Clickable from '../../components/Clickable';
+import { withForm } from '../../components/form';
+import RadioGroup from '../../components/RadioGroup/RadioGroup';
 
 const propTypes = {
+  dataSource: PropTypes.shape({
+    avatar: PropTypes.string,
+  }),
   getFieldDecorator: PropTypes.func.isRequired,
   validate: PropTypes.func.isRequired,
   onSubmit: PropTypes.func,
-  dataSource: PropTypes.shape({}),
 };
 
 const defaultProps = {
-  onSubmit: () => {},
   dataSource: {},
+  onSubmit: () => {},
 };
 
 const labelCol = {
@@ -28,6 +38,14 @@ class TestForm extends React.PureComponent {
     super(props);
 
     this.onSubmit = this.onSubmit.bind(this);
+  }
+
+  componentWillReceiveProps({ dataSource }) {
+    if (dataSource !== this.props.dataSource) {
+      if (dataSource.avatar !== this.props.dataSource.avatar) {
+        this.props.validate('avatar');
+      }
+    }
   }
 
   onSubmit() {
@@ -68,6 +86,24 @@ class TestForm extends React.PureComponent {
         </FormItem>
 
         <FormItem
+          label="Gender"
+          labelCol={labelCol}
+          wrapperCol={wrapperCol}
+        >
+          {getFieldDecorator('gender')((
+            <RadioGroup
+              options={[{
+                value: 'male',
+                title: 'Male',
+              }, {
+                value: 'female',
+                title: 'Female',
+              }]}
+            />
+          ))}
+        </FormItem>
+
+        <FormItem
           label="Birth Date"
           labelCol={labelCol}
           wrapperCol={wrapperCol}
@@ -85,6 +121,26 @@ class TestForm extends React.PureComponent {
           <div className="form-item-line-height">
             {dataSource.age}
           </div>
+        </FormItem>
+
+        <FormItem
+          label="Avatar"
+          labelCol={labelCol}
+          wrapperCol={wrapperCol}
+        >
+          {getFieldDecorator('avatar', {
+            rules: [{
+              validator: (file) => {
+                if (!file.type.startsWith('image')) {
+                  return '请选择图片';
+                }
+
+                return null;
+              },
+            }],
+          })((
+            <Input type="file" />
+          ))}
         </FormItem>
 
         <div className="mt-2">

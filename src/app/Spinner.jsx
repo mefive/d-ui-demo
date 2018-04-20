@@ -1,6 +1,7 @@
 import React from 'react';
-import { DoubleBounce, Tooltip } from 'ddy-ui';
 import ShowcaseContainer from './ShowcaseContainer/ShowcaseContainer';
+import Tooltip from '../components/Tooltip/Tooltip';
+import DoubleBounce from '../components/DoubleBounce/DoubleBounce';
 
 class Spinner extends React.PureComponent {
   render() {
