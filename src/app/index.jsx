@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -11,20 +12,20 @@ import {
 import style from './style/index.scss';
 
 // pages
-import Table from './Table';
-import OdometerNumber from './OdometerNumber';
-import CodeEditor from './CodeEditor';
-import DatePicker from './DatePicker';
-import DateRangePicker from './DateRangePicker';
-import FullScreenModal from './FullScreenModal';
-import Trigger from './Trigger';
-import Tooltip from './Tooltip';
-import Portal from './Portal';
-import Spinner from './Spinner';
-import Select from './Select';
-import NumberFlip from './NumberFlip/index';
-import Dialog from './Dialog';
-import Form from './Form';
+// import Table from './Table';
+// import OdometerNumber from './OdometerNumber';
+// import CodeEditor from './CodeEditor';
+// import DatePicker from './DatePicker';
+// import DateRangePicker from './DateRangePicker';
+// import FullScreenModal from './FullScreenModal';
+// import Trigger from './Trigger';
+// import Tooltip from './Tooltip';
+// import Portal from './Portal';
+// import Spinner from './Spinner';
+// import Select from './Select';
+// import NumberFlip from './NumberFlip/index';
+// import Dialog from './Dialog';
+// import Form from './Form';
 import Grid from './Grid';
 
 const links = [{
@@ -101,20 +102,20 @@ ReactDOM.render(
     history={hashHistory}
   >
     <Route path="/" component={Port}>
-      <Route path="table" component={Table} />
-      <Route path="odometerNumber" component={OdometerNumber} />
-      <Route path="codeEditor" component={CodeEditor} />
-      <Route path="datePicker" component={DatePicker} />
-      <Route path="dateRangePicker" component={DateRangePicker} />
-      <Route path="fullScreenModal" component={FullScreenModal} />
-      <Route path="trigger" component={Trigger} />
-      <Route path="tooltip" component={Tooltip} />
-      <Route path="portal" component={Portal} />
-      <Route path="spinner" component={Spinner} />
-      <Route path="select" component={Select} />
-      <Route path="numberFlip" component={NumberFlip} />
-      <Route path="dialog" component={Dialog} />
-      <Route path="form" component={Form} />
+      {/*<Route path="table" component={Table} />*/}
+      {/*<Route path="odometerNumber" component={OdometerNumber} />*/}
+      {/*<Route path="codeEditor" component={CodeEditor} />*/}
+      {/*<Route path="datePicker" component={DatePicker} />*/}
+      {/*<Route path="dateRangePicker" component={DateRangePicker} />*/}
+      {/*<Route path="fullScreenModal" component={FullScreenModal} />*/}
+      {/*<Route path="trigger" component={Trigger} />*/}
+      {/*<Route path="tooltip" component={Tooltip} />*/}
+      {/*<Route path="portal" component={Portal} />*/}
+      {/*<Route path="spinner" component={Spinner} />*/}
+      {/*<Route path="select" component={Select} />*/}
+      {/*<Route path="numberFlip" component={NumberFlip} />*/}
+      {/*<Route path="dialog" component={Dialog} />*/}
+      {/*<Route path="form" component={Form} />*/}
       <Route path="grid" component={Grid} />
     </Route>
   </Router>,

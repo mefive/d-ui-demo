@@ -7,28 +7,18 @@ var BUILD_PATH = 'live';
 
 module.exports = {
   entry: {
-    ashim: [
-      'es6-shim',
-      // 'whatwg-fetch',
-      // 'promise-polyfill',
+    polyfill: [
+      'babel-polyfill',
     ],
     vendor: [
       'moment',
       'highcharts',
-      // 'store',
-      // 'ua-parser-js',
-      // 'query-string',
     ],
     react: [
       'react',
       'react-dom',
       'prop-types',
       'react-router',
-      // 'react-redux',
-      // 'redux',
-      // 'redux-saga',
-      // 'redux-thunk',
-      // 'redux-actions',
     ],
   },
   output: {

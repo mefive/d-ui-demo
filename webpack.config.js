@@ -110,7 +110,7 @@ module.exports = function () {
         new webpack.DllReferencePlugin({
           context: '.',
           // eslint-disable-next-line
-          manifest: require(`./${BUILD_PATH}/dll/ashim-manifest.json`),
+          manifest: require(`./${BUILD_PATH}/dll/polyfill-manifest.json`),
         }),
         new webpack.DllReferencePlugin({
           context: '.',
