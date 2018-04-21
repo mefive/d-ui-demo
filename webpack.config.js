@@ -1,18 +1,18 @@
 /* eslint-env node */
-var path = require('path');
-var fs = require('fs');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var merge = require('webpack-merge');
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-var LodashWebpackPlugin = require('lodash-webpack-plugin');
+const path = require('path');
+const fs = require('fs');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const merge = require('webpack-merge');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const LodashWebpackPlugin = require('lodash-webpack-plugin');
 
-var BUILD_PATH = 'live';
+const BUILD_PATH = 'live';
 
 if (process.env.NODE_ENV === 'production') {
-  var dllFiles = fs.readdirSync(`./${BUILD_PATH}/dll/`).map(function (file) {
+  var dllFiles = fs.readdirSync(`./${BUILD_PATH}/dll/`).map((file) => {
     if (file.indexOf('dll.') >= 0) {
       return `dll/${file}`;
     }
@@ -60,8 +60,8 @@ module.exports = function () {
                 limit: 100,
                 name: 'images/[name].[hash:7].[ext]',
               },
-            }
-          ]
+            },
+          ],
         },
         {
           test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -72,8 +72,8 @@ module.exports = function () {
                 limit: 10000,
                 name: 'font/[name].[hash:7].[ext]',
               },
-            }
-          ]
+            },
+          ],
         },
         {
           test: /\.(rar|jar|zip)(\?.*)?$/,
@@ -84,8 +84,8 @@ module.exports = function () {
                 limit: 1,
                 name: 'files/[name].[hash:7].[ext]',
               },
-            }
-          ]
+            },
+          ],
         },
       ],
     },
@@ -145,14 +145,19 @@ module.exports = function () {
         contentBase: path.resolve(__dirname, 'div'),
         host: '0.0.0.0',
         disableHostCheck: true,
+        proxy: {
+          '/api/upload/*': {
+            target: 'http://localhost:1986',
+          },
+        },
       },
       plugins: [
         new HtmlWebpackPlugin({
           template: './src/templates/index.html',
           filename: 'index.html',
         }),
-      ]
-    })
+      ],
+    });
   }
 
   return config;

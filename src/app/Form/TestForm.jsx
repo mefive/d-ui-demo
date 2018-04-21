@@ -9,10 +9,11 @@ import Col from '../../components/grid/Col';
 import Clickable from '../../components/Clickable';
 import { withForm } from '../../components/form';
 import RadioGroup from '../../components/RadioGroup/RadioGroup';
+import ImageUploader from '../../components/ImageUploader/ImageUploader';
 
 const propTypes = {
   dataSource: PropTypes.shape({
-    avatar: PropTypes.string,
+    avatar: PropTypes.oneOfType([PropTypes.shape({}), PropTypes.string]),
   }),
   getFieldDecorator: PropTypes.func.isRequired,
   validate: PropTypes.func.isRequired,
@@ -38,14 +39,6 @@ class TestForm extends React.PureComponent {
     super(props);
 
     this.onSubmit = this.onSubmit.bind(this);
-  }
-
-  componentWillReceiveProps({ dataSource }) {
-    if (dataSource !== this.props.dataSource) {
-      if (dataSource.avatar !== this.props.dataSource.avatar) {
-        this.props.validate('avatar');
-      }
-    }
   }
 
   onSubmit() {
@@ -130,16 +123,22 @@ class TestForm extends React.PureComponent {
         >
           {getFieldDecorator('avatar', {
             rules: [{
-              validator: (file) => {
-                if (!file.type.startsWith('image')) {
-                  return '请选择图片';
+              validator: (avatar) => {
+                if (avatar != null && typeof avatar === 'object') {
+                  if (!avatar.type.startsWith('image')) {
+                    return false;
+                  }
                 }
 
-                return null;
+                return true;
               },
+              message: '请选择图片',
+            }, {
+              required: true,
+              message: '图片必传',
             }],
           })((
-            <Input type="file" />
+            <ImageUploader width={80} uploadUrl="/api/upload/images" />
           ))}
         </FormItem>
 
