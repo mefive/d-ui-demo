@@ -69,6 +69,7 @@
     "lodash": "^4.17.4",
     "mimoza": "^1.0.0",
     "moment": "^2.22.0",
+    "odometer": "^0.4.8",
     "prop-types": "latest",
     "query-string": "latest",
     "react": "^16.3.0",

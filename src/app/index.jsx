@@ -13,7 +13,7 @@ import style from './style/index.scss';
 
 // pages
 // import Table from './Table';
-// import OdometerNumber from './OdometerNumber';
+import OdometerNumber from './OdometerNumber';
 // import CodeEditor from './CodeEditor';
 import DatePicker from './DatePicker';
 import DateRangePicker from './DateRangePicker';
@@ -103,7 +103,7 @@ ReactDOM.render(
   >
     <Route path="/" component={Port}>
       {/*<Route path="table" component={Table} />*/}
-      {/*<Route path="odometerNumber" component={OdometerNumber} />*/}
+      <Route path="odometerNumber" component={OdometerNumber} />
       {/*<Route path="codeEditor" component={CodeEditor} />*/}
       <Route path="datePicker" component={DatePicker} />
       <Route path="dateRangePicker" component={DateRangePicker} />
