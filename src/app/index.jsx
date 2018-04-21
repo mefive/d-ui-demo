@@ -23,7 +23,7 @@ import Tooltip from './Tooltip';
 import Portal from './Portal';
 import Spinner from './Spinner';
 import Select from './Select';
-// import NumberFlip from './NumberFlip/index';
+import NumberFlip from './NumberFlip/index';
 import Dialog from './Dialog';
 import Form from './Form';
 import Grid from './Grid';
@@ -113,7 +113,7 @@ ReactDOM.render(
       <Route path="portal" component={Portal} />
       <Route path="spinner" component={Spinner} />
       <Route path="select" component={Select} />
-      {/*<Route path="numberFlip" component={NumberFlip} />*/}
+      <Route path="numberFlip" component={NumberFlip} />
       <Route path="dialog" component={Dialog} />
       <Route path="form" component={Form} />
       <Route path="grid" component={Grid} />
