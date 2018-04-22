@@ -1,6 +1,6 @@
 import React from 'react';
-import { Table } from 'ddy-ui';
 import ShowcaseContainer from './ShowcaseContainer';
+import Table from '../components/Table/Table';
 
 const columns = ['原始渠道号', '周编号', '周新增', '0周广告点击', '0周广告收益', '1周广告点击', '1周广告收益', '新增成本'];
 
@@ -62,22 +62,7 @@ let rows = [];
 }());
 
 function getColumns() {
-  // const max = 3;
-  // const rt = [];
-
-  // for (let i = 0; i < max; i++) {
-  //   rt.push({
-  //     key: `${i}`,
-  //     title: `${i}_column`,
-  //     sortKey: `${i}`,
-  //     filterable: true,
-  //     noWrap: true,
-  //   });
-  // }
-
-  // return rt;
-
-  return columns.map((c, index) => ({
+  return [...columns, ...columns].map((c, index) => ({
     key: index,
     title: c,
     // sortKey: `${i}`,
@@ -125,33 +110,30 @@ class ShowcaseTable extends React.Component {
     return (
       <div id="table">
         <ShowcaseContainer title="Table">
-          <div className="table-container">
-            <Table
-              columns={this.state.columns}
-              dataSource={this.state.dataSource}
-              // height="auto"
-              // fixHeader
-              // fixColumnCount={2}
-              rowSelection={{
-                onChange: selectedRowKeys =>
-                  this.setState({ selectedRowKeys }),
-                selectedRowKeys: this.state.selectedRowKeys,
-              }}
-              defaultSort={{
-                key: '2',
-                direction: Table.ASC,
-              }}
-              // rowKey="2"
-              enablePagination
-              page={this.state.page}
-              rowsPerPage={10}
-              onPageChange={page => this.setState({ page })}
-              // expandedRowRender={record => (
-              //   <div className="description">
-              //     {record.description}
-              //   </div>
-              // )}
-            />
+          <div>
+            <div className="table-container">
+              <Table
+                columns={this.state.columns}
+                dataSource={this.state.dataSource}
+                height={500}
+                fixHeader
+                fixColumnCount={2}
+                rowSelection={{
+                  onChange: selectedRowKeys =>
+                    this.setState({ selectedRowKeys }),
+                  selectedRowKeys: this.state.selectedRowKeys,
+                }}
+                defaultSort={{
+                  key: '2',
+                  direction: Table.ASC,
+                }}
+                // rowKey="2"
+                enablePagination
+                page={this.state.page}
+                rowsPerPage={50}
+                onPageChange={page => this.setState({ page })}
+              />
+            </div>
           </div>
         </ShowcaseContainer>
       </div>

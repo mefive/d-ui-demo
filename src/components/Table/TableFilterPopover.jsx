@@ -73,11 +73,9 @@ class TableFilterPopover extends React.PureComponent {
             value={this.state.query}
             onChange={query => this.setState({ query })}
             maxLength={100}
-            onKeyPress={(e) => {
-              if (e.charCode === 13) {
-                if (filteredItems.length > 0) {
-                  this.onConfirm();
-                }
+            onEnter={() => {
+              if (filteredItems.length > 0) {
+                this.onConfirm();
               }
             }}
           />

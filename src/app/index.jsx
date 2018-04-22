@@ -12,9 +12,9 @@ import {
 import style from './style/index.scss';
 
 // pages
-// import Table from './Table';
+import Table from './Table';
 import OdometerNumber from './OdometerNumber';
-// import CodeEditor from './CodeEditor';
+import CodeEditor from './CodeEditor';
 import DatePicker from './DatePicker';
 import DateRangePicker from './DateRangePicker';
 import FullScreenModal from './FullScreenModal';
@@ -102,9 +102,9 @@ ReactDOM.render(
     history={hashHistory}
   >
     <Route path="/" component={Port}>
-      {/*<Route path="table" component={Table} />*/}
+      <Route path="table" component={Table} />
       <Route path="odometerNumber" component={OdometerNumber} />
-      {/*<Route path="codeEditor" component={CodeEditor} />*/}
+      <Route path="codeEditor" component={CodeEditor} />
       <Route path="datePicker" component={DatePicker} />
       <Route path="dateRangePicker" component={DateRangePicker} />
       <Route path="fullScreenModal" component={FullScreenModal} />

@@ -1,6 +1,6 @@
 import React from 'react';
-import { CodeEditor } from 'ddy-ui';
 import ShowcaseContainer from './ShowcaseContainer';
+import CodeEditor from '../components/CodeEditor/CodeEditor';
 
 const defaultState = {
   value: '',
