@@ -1,8 +1,7 @@
 import React from 'react';
-
+import Portal from 'ddy-ui/lib/Portal';
 import Test from './Test';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
-import Portal from '../../components/Portal';
 
 class PortalShowcase extends React.PureComponent {
   constructor(props) {

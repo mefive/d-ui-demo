@@ -1,9 +1,9 @@
 import React from 'react';
+import Tooltip from 'ddy-ui/lib/Tooltip';
+import Popover from 'ddy-ui/lib/Popover';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 
 import style from './style/index.scss';
-import Tooltip from '../../components/Tooltip';
-import Popover from '../../components/Popover';
 
 class ShowcaseTooltip extends React.PureComponent {
   render() {

@@ -1,15 +1,13 @@
 import React from 'react';
+import { Col, Row } from 'ddy-ui/lib/grid';
+
+import DatePicker from 'ddy-ui/lib/DatePicker';
+import RadioGroup from 'ddy-ui/lib/RadioGroup';
+import Clickable from 'ddy-ui/lib/Clickable';
+import { FormItem, Form, withForm } from 'ddy-ui/lib/form';
+import Input from 'ddy-ui/lib/Input';
+import ImageUploader from 'ddy-ui/lib/ImageUploader';
 import PropTypes from 'prop-types';
-import Form from '../../components/form/Form';
-import FormItem from '../../components/form/FormItem';
-import Input from '../../components/Input';
-import DatePicker from '../../components/DatePicker/DatePicker';
-import Row from '../../components/grid/Row';
-import Col from '../../components/grid/Col';
-import Clickable from '../../components/Clickable';
-import { withForm } from '../../components/form';
-import RadioGroup from '../../components/RadioGroup/RadioGroup';
-import ImageUploader from '../../components/ImageUploader/ImageUploader';
 
 const propTypes = {
   dataSource: PropTypes.shape({

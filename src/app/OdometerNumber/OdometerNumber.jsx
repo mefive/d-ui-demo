@@ -1,7 +1,7 @@
 import React from 'react';
+import OdometerNumber from 'ddy-ui/lib/OdometerNumber';
 import calendarBackgoundImage from './images/calendar.png';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
-import OdometerNumber from '../../components/OdometerNumber/OdometerNumber';
 
 class ShowcaseOdometerNumber extends React.Component {
   constructor(props) {

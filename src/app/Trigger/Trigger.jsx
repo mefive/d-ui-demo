@@ -1,12 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-
+import Trigger from 'ddy-ui/lib/Trigger';
+import Popover from 'ddy-ui/lib/Popover';
 
 import ShowcaseContainer from '../ShowcaseContainer';
 
 import style from './style/index.scss';
-import Trigger from '../../components/Trigger';
-import Popover from '../../components/Popover/Popover';
 
 class ShowcaseTrigger extends React.PureComponent {
   constructor(props) {

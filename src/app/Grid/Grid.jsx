@@ -1,9 +1,7 @@
 import React from 'react';
-
+import { Col, Row } from 'ddy-ui/lib/grid';
 import ShowcaseContainer from '../ShowcaseContainer/ShowcaseContainer';
 import style from './style/index.scss';
-import Col from '../../components/grid/Col';
-import Row from '../../components/grid/Row';
 
 const GUTTER = 20;
 
